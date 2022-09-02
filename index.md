@@ -5,4 +5,4 @@
       <th>length</th>
     </tr>
   </table></div>
-<script src="https://raw.githubusercontent.com/zk524/zk524.github.io/golf/index.js"></script>
+<script src="https://zk524.github.io/index.js"></script>
