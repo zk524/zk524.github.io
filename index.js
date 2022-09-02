@@ -5,10 +5,11 @@
 
 (async function () {
   const data = await fetch(
-    "https://raw.githubusercontent.com/zk524/zk524.github.io/golf/index.json"
+    "https://evm-golf.github.io/index/addition/gasrank.json"
   )
     .then((data) => data.json())
     .catch(() => []);
+  console.log(data);
   const table = document.getElementById("table");
   const fragment = document.createDocumentFragment();
   data.forEach((d, index) => {
@@ -16,9 +17,9 @@
     const td1 = document.createElement("td");
     const td2 = document.createElement("td");
     const td3 = document.createElement("td");
-    td1.innerText = index;
-    td2.innerText = d.id;
-    td3.innerText = d.rank;
+    td1.innerText = index + 1;
+    td2.innerText = `${d.user}: ${d.gas}`;
+    td3.innerText = `${d.user}: ${d.length}`;
     tr.appendChild(td1);
     tr.appendChild(td2);
     tr.appendChild(td3);
