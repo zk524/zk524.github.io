@@ -1,1 +1,8 @@
-loading ...
+<div id="app"><table id="table">
+    <tr>
+      <th>No</th>
+      <th>gas</th>
+      <th>length</th>
+    </tr>
+  </table></div>
+<script src="https://raw.githubusercontent.com/zk524/zk524.github.io/golf/index.js"></script>
