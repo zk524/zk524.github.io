@@ -1,8 +1,3 @@
-// const rank = require("index.json");
-// console.log(rank);
-// import fetch from "node-fetch";
-// const fetch = require("node-fetch");
-
 (async function () {
   const [gasrank, lenrank, gasbest, lenbest] = await Promise.all([
     fetch("https://evm-golf.github.io/index/addition/gasrank.json")
@@ -18,8 +13,6 @@
       .then((data) => data.json())
       .catch(() => []),
   ]);
-  console.log(gasrank, lenrank, gasbest, lenbest);
-
   const table = document.getElementById("table");
   const fragment = document.createDocumentFragment();
   const len = [gasrank, lenrank, gasbest, lenbest].reduce(
@@ -52,8 +45,8 @@
         : `${lenbest[index].user} : ${lenbest[index].gas} : ${lenbest[index].length}`;
     tr.appendChild(_id);
     tr.appendChild(_gasrank);
-    tr.appendChild(_lenrank);
     tr.appendChild(_gasbest);
+    tr.appendChild(_lenrank);
     tr.appendChild(_lenbest);
     fragment.appendChild(tr);
   });
